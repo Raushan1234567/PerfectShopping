@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in  page</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+         .nav{
+            width: 100%;
+            height: 70px;
+            display: flex;
+        
+            
+            
+            box-shadow: 2px 2px 2px 2px rgb(214, 191, 191);
+        }
+        .nav div:nth-child(1){
+            text-decoration: none;
+            display: flex;
+            width: 50%;
+            justify-content: space-around;
+            align-items: center;
+            margin-left: 15px;
+
+        }
+        .nav div:nth-child(1) a {
+            text-decoration: none;
+        }
+        .nav div:nth-child(2){
+        
+            
+            width: 25%;
+        display: flex;
+        margin-left: 250px;
+            align-items: center;
+            justify-content: space-around;
+
+        }
+        .nav div:nth-child(2) a {
+            text-decoration: none;
+            font-size: 15px;
+        }
+    
+    #form1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        
+  border: none;
+        }
+        #submit{
+            margin-top: 30px;
+            border: none;
+            background-color: coral;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            
+        }
+        #pass{
+            margin-top: 20px;
+          
+        }
+        .main2{
+            text-align: center;
+            color:red;
+            
+        }
+        /* body{
+            
+            box-shadow:2px 2px 2px 2px rgb(250, 242, 242) ;
+            margin-top: 8%;
+            width: 50%;
+            justify-content: center;
+            margin-left: 350px;
+            
+        } */
+        #mob{
+          margin-top: 20px;
+
+        }
+        .main2 img{
+            width:20%;
+            margin-top: 50px;
+        }
+        #submit a{
+            text-decoration: none;
+        }
+        </style>
+   
+</head>
+<body>
+    
+    <div class="nav">
+        
+        <div>
+           <i><h1>Easy shop</h1></i>
+           <a href="">WOMEN</a>
+            <a href="">MEN</a>
+            <a href="">KIDS</a>
+           <a href="">HOME</a>
+           <a href="">OFFER</a>
+            
+        </div>
+
+        
+            <div>
+                <a href="">SCRAP BOOK </a>
+                <a href="">SEARCH</a>
+                <a href="">CART</a>
+                <a href="./signin.html">LOGIN</a>
+            
+            </div>
+                
+    
+    
+    
+
+    </div>
+    
+
+
+
+    <div class="main2">
+        <img src="./logo.png" alt="error">
+        <h1><i>
+            WELCOME IN EASY SHOP</i></h1>
+    </div>
+    <div id="form1">
+        <input type="email" placeholder="Enter your email address" id="email"  >
+       
+        <input type="text" placeholder="Mobile number" id="mob">
+        <input type="password" placeholder=" put password" id="pass">
+     <button id="submit"><a href="./menshop.html">SignUp</a></button>
+    </div>
+</body>
+<script>
+let arr=[]
+let button=document.getElementById("submit")
+function display(){
+button.addEventListener("click",(e)=>{
+    e.preventDefault()
+    let obj={
+        email:document.getElementById("email").value,
+        mob:document.getElementById("mob").value,
+        pass:document.getElementById("pass").value
+    }
+    arr.push(obj)
+    localStorage.setItem("login",JSON.stringify(arr))
+    alert("sign up successful")
+    
+
+
+})
+
+}
+display()
+
+
+</script>
+</html>
