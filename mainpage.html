@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Easy shop</title>
+    <link rel="icon" href="./logo.png" type="image/x-icon">
     <style>
         *{
             margin:0px;
@@ -172,6 +173,24 @@
     #main3 h2{
        color:rgb(111, 113, 224);
     }
+    #searchbar form{
+     display: flex;
+    
+    
+    }
+    #search{
+        border-radius: 2px;
+        display: block;
+        border: 1px solid goldenrod;
+        color:black;
+    }
+    #submit{
+        background-color: rgb(44, 39, 8);
+        color: white;
+        padding: 5px;
+        border-radius: 2px;
+    }
+    
    
         
         
@@ -260,9 +279,16 @@
         </div>
 
         
-            <div>
-                <a href="">SCRAP BOOK </a>
-                <a href="">SEARCH</a>
+            <div id="searchbar">
+                
+                
+                
+                    <form>
+                         <input type="text" id="search" placeholder="Enter product name">
+                         <input type="submit" value="search" id="submit">
+                    </form>
+            
+            
                 <a href="">CART</a>
                 <a href="./loginpage.html">PROFILE</a>
             
@@ -310,3 +336,4 @@
     
 </body>
 </html>
+<script></script>

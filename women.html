@@ -133,14 +133,16 @@
     .offer p{
         margin-left: 30px;
     }
-    .sliding{
+    .carousel{
         width:75%;
       margin: auto;
       margin-top: 10px;
+    
      
     }
-    .sliding img{
+    .carousel img{
         height: 150px;
+        width: 100%;
      
         
     }
@@ -152,6 +154,7 @@
         gap: 12px;
         padding-left: 15px;
         box-shadow: 2px 2px 2px 2px rgb(240, 234, 234);
+        padding-top: 50px;
     
     }
     #main3 button{
@@ -173,17 +176,50 @@
     #main3 h2{
        color:rgb(111, 113, 224);
     }
-   #sort{
+    #sort{
     color:white;
-    margin-left: 12px;
+    margin-left: 4px;
     padding: 10px;
-    font-size: 20px;
+    font-size: 15px;
     border-radius: 15px;
-    background-color: brown;
+    background-color:rgb(105, 81, 18);
     border:none;
+    margin-top: 15px;
+    
        
-   }
-        
+   }  
+   #searchbar form{
+     display: flex;
+    
+    
+    }
+    #search{
+        border-radius: 2px;
+        display: block;
+        border: 1px solid goldenrod;
+        color:black;
+    }
+    #submit{
+        background-color: rgb(44, 39, 8);
+        color: white;
+        padding: 5px;
+        border-radius: 2px;
+    }
+    #total1{
+        width: 145px;
+        font-size: 15px;
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight:bolder;
+        font-style: italic;
+        color:white;
+        border: 1px solid black;
+        background-color:rgb(105, 81, 18);
+        border-radius: 15px;
+        padding: 5px;
+    }
+    #total2{
+        color:red;
+    } 
         
       
     </style>
@@ -195,16 +231,11 @@
     </div>
 
 
-
     <div>
-        <select name="" id="sort">
-            <option value="">Sort</option>
-            <option value="LOW">LOW TO HIGH</option>
-            <option value="HIGH">HIGH TO LOW</option>
-            
-            
-        </select>
+        <h1 id="total1">Total Products: <span id="total2">0</span></h1>
      </div>
+
+    
 
     <div class="navdown1">
         <a href=""><img src="https://img0.junaroad.com/images/icons/women/winter.png" alt="error"></a>
@@ -226,13 +257,22 @@
 <div class="border">
 
 </div>
+<div>
+    <select name="" id="sort">
+        <option value="">Sort</option>
+        <option value="LOW">LOW TO HIGH</option>
+        <option value="HIGH">HIGH TO LOW</option>
+        
+        
+    </select>
+ </div>
 
 <div class="offer">
     <img src="https://img0.junaroad.com/assets/images/blue_annoucement.png" alt="error">
     <p>
         Get FLAT 10% OFF on your purchase on payment via Paytm/ GPay/ PhonePe/ Net Banking/ Any Credit or Debit Card</p>
 </div>
-<div class="carousel" data-flickity='{"autoPlay":true}'>
+<div class="carousel" data-flickity='{"autoPlay":true, "wrapAround": true}'>
 
   
             <img src="https://img1.junaroad.com//assets/images/mobileNotif/img-1667388470485.jpg?crsl_pos=0" alt="error">
@@ -240,6 +280,9 @@
             <img src="https://img1.junaroad.com//assets/images/mobileNotif/img-1674029296684.jpg?crsl_pos=0" alt="">
             <img src="https://img1.junaroad.com//assets/images/mobileNotif/img-1652694665568.jpg?crsl_pos=0" alt="">
             <img src="https://img1.junaroad.com//assets/images/mobileNotif/img-1674044135107.jpg?crsl_pos=0" alt="">
+            <img src="https://img0.junaroad.com/images/banners/B2G1_13january2023_1673587401792.jpg?crsl_pos=0" alt="">
+            <img src="https://img1.junaroad.com//assets/images/mobileNotif/img-1667988209100.jpg?crsl_pos=0" alt="">
+            <img src="https://img1.junaroad.com//assets/images/mobileNotif/img-1673696931249.jpg?crsl_pos=0" alt="">
      
     
     
@@ -275,19 +318,25 @@
         </li>
             <a href="./menshop.html">MEN</a>
             <a href="">KIDS</a>
-           <a href="./home.html">HOME</a>
+           <a href="./home2.html">HOME</a>
            <a href="">OFFER</a>
         
         </div>
 
-        
-            <div>
-                <a href="">SCRAP BOOK </a>
-                <a href="">SEARCH</a>
-                <a href="">CART</a>
-                <a href="./loginpage.html">PROFILE</a>
-            
-            </div>
+        <div id="searchbar">
+                
+                
+                
+            <form>
+                 <input type="text" id="search" placeholder="Enter product name">
+                 <input type="submit" value="search" id="submit">
+            </form>
+    
+    
+        <a href="./cart.html">CART</a>
+        <a href="./loginpage.html">PROFILE</a>
+    
+    </div>
                 
     
     
@@ -385,13 +434,12 @@ let API="https://63c63a6b4ebaa8028541ae3f.mockapi.io/products?page=2&limit=15"
             }
         }
     })
+    let total=document.getElementById("total2")
       let cont=document.getElementById("main3")
-
-    function display(){
+      let arr=JSON.parse(localStorage.getItem("cart"))||[]
+    function display(data){
     cont.innerHTML=""
-       fetchdata.forEach(element => {
-            
-
+       data.forEach(element => {
             let card=document.createElement("div")
             let img=document.createElement("img")
             img.src=element.avatar
@@ -403,12 +451,51 @@ let API="https://63c63a6b4ebaa8028541ae3f.mockapi.io/products?page=2&limit=15"
 
             let button=document.createElement("button")
             button.innerText="ADD TO CART"
+            total.innerText=data.length;
+
+            button.addEventListener("click",(e)=>{
+                if(checkDuplicate(element)){
+                  alert("Product Already in Cart")
+                }else{
+                  arr.push({...element,quantity:1})
+                  localStorage.setItem("cart",JSON.stringify(arr))
+                  alert("Product Added To Cart")
+
+                }
+            })
             
             card.append(img,name,price,button)
             cont.append(card)
             
         });
+       
+        
     }
-    display()
+    function  checkDuplicate(element){
+        for(let i=0;i<arr.length;i++){
+          if(arr[i].id===element.id){
+            return true
+          }
+        }
+        return false
+   }
+   let inp=document.querySelector("form")
+    
+    inp.addEventListener("submit",(e)=>{
+    
+      e.preventDefault()
+      let search=document.getElementById("search").value
+      let fill=fetchdata.filter(element =>{
+    if(element.name.toUpperCase().includes(search.toUpperCase())==true){
+      return true
+    }else{
+      return false
+    }
+      })
+      display(fill)
+    
+      console.log(fill)
+    })
+    // total.innerText=fetchdata.length;
 </script>
 </html>

@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Easy shop</title>
+    <link rel="icon" href="./logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <style>
         *{
             margin:0px;
@@ -52,29 +54,21 @@
             display: flex;
             margin-left: 200px;
             margin-top: 90px;
-            width: 200px;
+        flex-direction: row-reverse;
             justify-content: space-around;
             
           
         }
-        .navdown a{
+        .navdown a:nth-child(1){
             text-decoration: none;
+            margin-left: 10px;
         }
-        .navdown1{
-            width: 70%;
-            margin: auto;
-            display: flex;
-            justify-content: space-around;
-            padding: 30px;
-            box-shadow: 2px 2px 2px 2px rgb(234, 234, 236);
-            top:0;
-            
+        .navdown a:nth-child(2){
+            text-decoration: none;
+            margin-left: 10px;
+        }
         
-        }
-        .navdown1 img{
-            width: 90%;
-            
-        }
+       
         body{
             text-decoration: none;
         }
@@ -132,14 +126,16 @@
     .offer p{
         margin-left: 30px;
     }
-    .sliding{
+    .carousel{
         width:75%;
       margin: auto;
       margin-top: 10px;
+    
      
     }
-    .sliding img{
+    .carousel img{
         height: 150px;
+        width: 100%;
      
         
     }
@@ -151,19 +147,47 @@
         gap: 12px;
         padding-left: 15px;
         box-shadow: 2px 2px 2px 2px rgb(240, 234, 234);
+        padding-top: 50px;
     
     }
     #main3 button{
         color:white;
         background-color: goldenrod;
-        padding: 10px;
+        padding: 5px;
         border: none;
-        margin-left: 50px;
+        margin-left: 10px;
         margin-top: 5px;
+        border-radius: 10px;
 
+        
     }
+    #main3 button3{
+        color:white;
+        background-color: orangered;
+        padding: 5px;
+        border: none;
+        margin-left: 20px;
+        margin-top: 5px;
+        border-radius: 10px;
+
+        
+    }
+    #main3 button1{
+        color:white;
+        background-color: goldenrod;
+        padding: 5px;
+        border: none;
+        margin-right: 70px;
+        margin-top: 5px;
+        border-radius: 10px;
+
+        
+    }
+
+    
     #main3 div{
         box-shadow: 2px 2px 2px 2px rgb(240, 234, 234);
+        padding-bottom: 20px;
     }
     #main3 img{
         width: 80%;
@@ -172,7 +196,17 @@
     #main3 h2{
        color:rgb(111, 113, 224);
     }
-    #searchbar form{
+   #sort{
+    color:white;
+    margin-left: 12px;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: brown;
+    border:none;
+       
+   }
+   #searchbar form{
      display: flex;
     
     
@@ -189,53 +223,35 @@
         padding: 5px;
         border-radius: 2px;
     }
+      #total{
+        color:goldenrod;
+        font-size: 20px;
+        width: 250px;
+        margin-top: 20px;
+        margin: auto;
+        border: 2px solid green;
+        border-radius: 5px;
         
+      }
         
       
     </style>
 </head>
 <body>
     <div class="navdown">
-        <a href="./menshop.html"><h5>MEN</h5></a>
-        <a href="./women.html"><h5>WOMEN</h5></a>
+        <h1 id="total">Your Total cart Price is:- <span id="cart-total">0</span></h1>
+       
     </div>
 
-    <div class="navdown1">
-        <a href=""><img src="https://img0.junaroad.com/images/icons/men/winter.png" alt="error"></a>
-        <a href=""><img src="https://img0.junaroad.com/images/icons/men/tshirts.png" alt="error"></a>
-        <a href=""><img src="https://img0.junaroad.com/images/icons/men/shirts.png" alt="error"></a>
-        <a href=""><img src="https://img0.junaroad.com/images/icons/men/jeans.png" alt="error"></a>
-        <a href=""><img src="https://img0.junaroad.com/images/icons/men/trousers.png" alt="error"></a>
-        <a href=""><img src="https://img0.junaroad.com/images/icons/men/footwear.png" alt="error"></a>
-        <a href=""><img src="https://img0.junaroad.com/images/icons/men/footwear.png" alt="error"></a>
-        <a href=""><img src="https://img0.junaroad.com/images/icons/men/kids.png" alt="error"></a>
-        <a href=""><img src="https://img0.junaroad.com/images/icons/men/kids.png" alt="error"></a>
-        <a href=""><img src="https://img0.junaroad.com/images/icons/women/home.png" alt="error"></a>
-        <a href=""><img src="https://img0.junaroad.com/images/icons/women/bottoms.png" alt="error"></a>
-        <a href=""><img src="https://img0.junaroad.com/images/icons/men/accessory.png" alt="error"></a>
-        <a href=""><img src="https://img0.junaroad.com/images/icons/women/addons.png" alt="error"></a>
 
-    </div>
-<div class="border">
 
-</div>
 
-<div class="offer">
-    <img src="https://img0.junaroad.com/assets/images/blue_annoucement.png" alt="error">
-    <p>
-        Get FLAT 10% OFF on your purchase on payment via Paytm/ GPay/ PhonePe/ Net Banking/ Any Credit or Debit Card</p>
-</div>
 
-    <div class="sliding">
-        <marquee behavior="alternate" direction="right">
-            <img src="https://img1.junaroad.com//assets/images/mobileNotif/img-1667388470485.jpg?crsl_pos=0" alt="error">
-            <img src="https://img1.junaroad.com//assets/images/mobileNotif/img-1658918101342.jpg?crsl_pos=0" alt="error">
-            <img src="https://img1.junaroad.com//assets/images/mobileNotif/img-1674029296684.jpg?crsl_pos=0" alt="">
-            <img src="https://img1.junaroad.com//assets/images/mobileNotif/img-1652694665568.jpg?crsl_pos=0" alt="">
-            <img src="https://img1.junaroad.com//assets/images/mobileNotif/img-1674044135107.jpg?crsl_pos=0" alt="">
-        </marquee>
-    
-    </div>
+  
+
+
+
+
 
    
 
@@ -243,7 +259,7 @@
         
         <div>
             
-           <i><h1 id="name">Easy shop</h1></i>
+            <a href="./mainpage2.html"><i><h1 id="name">Easy shop</h1></i></a>
            <li><a href="./women.html">WOMEN</a>
             
         <ul>
@@ -268,28 +284,12 @@
         </li>
             <a href="./menshop.html">MEN</a>
             <a href="">KIDS</a>
-           <a href="./home.html">HOME</a>
+           <a href="./home2.html">HOME</a>
            <a href="">OFFER</a>
         
         </div>
 
-        
-           
-        <div id="searchbar">
-                
-                
-                
-            <form>
-                 <input type="text" id="search" placeholder="Enter product name">
-                 <input type="submit" value="search" id="submit">
-            </form>
-    
-    
-        <a href="">CART</a>
-        <a href="./loginpage.html">PROFILE</a>
-    
-    </div>
-                
+       
     
     
     
@@ -298,37 +298,84 @@
     
     
 
-
+     
     <div id="main3">
-        <div>
-           <a href="./women.html"><img src="https://img1.junaroad.com/stories/story_p_63bfe02ff47b700819353f81-1673521293.jpeg" alt="error"></a> 
-           
-        
 
-        </div>
-        <div>
-            <a href="./women.html"><img src="https://img2.junaroad.com/stories/story_p_635ffb93fd1d3c37070ee473-1673941987.jpeg" alt="error"></a>
-        </div>
-
-        <div>
-            <a href="./women.html"><img src="https://img0.junaroad.com/stories/story_p_635b50c7fd1d3c370709948c-1672760687.jpeg" alt="error"></a>
-        </div>
-        <div>
-            <a href="./women.html"><img src="https://img0.junaroad.com/stories/story_p_636411ecf47b70081a637eec-1671023028.jpeg" alt="error"></a>
-        </div>
-        
-        <div>
-            <a href="./women.html"><img src="https://img3.junaroad.com/stories/story_p_6343b7d0f380570819d2a475-1666254102.jpeg" alt="error"></a>
-        </div>
-        
-        <div>
-            <a href="./women.html"><img src="https://img2.junaroad.com/stories/story_p_63551459adb8b86556e46415-1670398594.jpeg" alt="error"></a>
-        </div>
-        
-        
     </div>
-    
+
 
     
 </body>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script>
+
+    
+      let cont=document.getElementById("main3")
+let cart1=JSON.parse(localStorage.getItem("cart"))
+    function display(){
+        let total=document.getElementById("cart-total")
+    cont.innerHTML=""
+       cart1.forEach(element => {
+            
+
+            let card=document.createElement("div")
+            let img=document.createElement("img")
+            img.src=element.avatar
+            let name=document.createElement("h2")
+            name.innerText=element.name
+            let quantity = document.createElement("span");
+            quantity.textContent=element.quantity
+
+            let Increment = document.createElement("button");
+        let Decrement = document.createElement("button1");
+        Increment.textContent="+"
+        Decrement.textContent="-"
+
+            let price=document.createElement("h2")
+            price.innerText="₹"+element.price
+            let button1=document.createElement("button3")
+            button1.innerText="BUY"
+            
+
+            let button=document.createElement("button")
+            button.innerText="REMOVE"
+
+            button.addEventListener("click",(e)=>{
+                e.preventDefault()
+  cart1=cart1.filter((ele)=>{
+    return ele.id!=element.id;
+  })
+  localStorage.setItem("cart",JSON.stringify(cart1))
+display()
+})
+
+Increment.addEventListener("click",()=>{
+  element.quantity++
+   localStorage.setItem("cart",JSON.stringify(cart1))
+   display()
+})
+
+Decrement.addEventListener("click",()=>{
+  if(element.quantity>1){
+  element.quantity--
+   localStorage.setItem("cart",JSON.stringify(cart1))
+   display()}
+})
+
+            
+            
+            card.append(img,name,price,button,Increment, quantity,Decrement,button1)
+            cont.append(card)
+            
+        });
+
+        let sum=0
+      for(let i=0;i<cart1.length;i++){
+        sum+=cart1[i].price*cart1[i].quantity
+      }
+   total.textContent=sum
+
+    }
+    display()
+</script>
 </html>
