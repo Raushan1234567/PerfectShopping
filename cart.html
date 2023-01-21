@@ -375,6 +375,7 @@
     
       let cont=document.getElementById("main3")
 let cart1=JSON.parse(localStorage.getItem("cart"))
+let arr1=JSON.parse(localStorage.getItem("buy"))
     function display(){
         let total=document.getElementById("cart-total")
     cont.innerHTML=""
@@ -398,7 +399,11 @@ let cart1=JSON.parse(localStorage.getItem("cart"))
             price.innerText="₹"+element.price
             let button1=document.createElement("button3")
             button1.innerText="BUY"
-            
+            button1.addEventListener("click",()=>{
+                arr1.push({...element,quantity:1})
+                  localStorage.setItem("buy",JSON.stringify(arr1))
+                  window.location.href="./purchage.html"
+            })
 
             let button=document.createElement("button")
             button.innerText="REMOVE"

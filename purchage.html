@@ -24,6 +24,9 @@
             
             box-shadow: 2px 2px 2px 2px rgb(214, 191, 191);
         }
+        .nav:hover{
+            background-color: goldenrod;
+        }
         .nav div:nth-child(1) {
             text-decoration: none;
             display: flex;
@@ -96,10 +99,18 @@
             display: block;
         
             background-color: white;
-            margin-top: 20px;
-            position: fixed;
-               
+            border-bottom: 2px solid grey;
+        
+            position:fixed;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 10px;
+padding: 30px 30px 10px 30px;
+background-color: goldenrod;
+margin-top: 5px;    
+
         }
+       
        
         #name{
                color: rgb(49, 36, 1);
@@ -140,14 +151,15 @@
         
     }
     #main3{
-        width:70%;
-        margin: auto;
+        width:30%;
+        
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(1,1fr);
         gap: 12px;
         padding-left: 15px;
         box-shadow: 2px 2px 2px 2px rgb(240, 234, 234);
         padding-top: 50px;
+        
     
     }
     #main3 button{
@@ -188,6 +200,8 @@
     #main3 div{
         box-shadow: 2px 2px 2px 2px rgb(240, 234, 234);
         padding-bottom: 20px;
+        justify-content: center;
+        width: 100%;
     }
     #main3 img{
         width: 80%;
@@ -195,6 +209,7 @@
     }
     #main3 h2{
        color:rgb(111, 113, 224);
+       margin-left: 100px;
     }
    #sort{
     color:white;
@@ -233,7 +248,53 @@
         border-radius: 5px;
         
       }
+      .main2{
+        display: flex;
+        margin: auto;
+        width: 70%;
+        justify-content: space-around;
+       
+      }
+      .main1{
+    
+        width: 200px;
+      }
+      .main1 form h1:nth-child(1){
+        margin-top: 30px;
+        background-color: rgb(92, 67, 4);
+        color: white;
+        font-style: oblique;
+        border: none;
+
+      }
+      .main1  h1:nth-child(1){
         
+        background-color: rgb(160, 115, 2);
+        color: white;
+        font-style: oblique;
+
+      }
+      .main1 form h1:nth-child(1):hover{
+        background-color: rgb(3, 3, 56);
+        
+      }
+      .main1 form input{
+        margin-top: 20px;
+        padding: 10px;
+      }
+        .main1 div button{
+            background-color: rgb(66, 48, 1);
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+        }
+        .main4 h3{
+            font-style: oblique ;
+            color:black;
+        }
+        .main4 p{
+            color:black
+        }
       
     </style>
 </head>
@@ -263,14 +324,14 @@
            <li><a href="./women.html">WOMEN</a>
             
         <ul>
-            <li><a href="">Ethnic Wear</a> </li>
+            <li><a href="./women.html">Ethnic Wear</a> </li>
             <li><a href=""> Kurta Kurtis</a> </li>
             <li><a href="">Sarees</a> </li>
             <li><a href="">Suits & Dress Materials</a> </li>
             <li><a href="">Lehengas</a> </li>
-            <li><a href="">Blouses</a> </li>
+            <li><a href="./women.html">Blouses</a> </li>
             <li><a href="">Leggings, Salwar & Churidaar</a> </li>
-            <li><a href="">Ethnic Dresses</a> </li>
+            <li><a href="./women.html">Ethnic Dresses</a> </li>
             <li><a href="">Ethnic Shrugs & Jackets</a> </li>
             <li><a href="">Palazzos & Skirts</a> </li>
             <li><a href="">Dupattas</a> </li>
@@ -297,12 +358,36 @@
     </div>
     
     
-
+<div class="main2">
+    
      
     <div id="main3">
 
     </div>
+    <div class="main4">
+        <h3>RETURN POLICY</h3>
+        <P>After purchase the product return policy is valid till two days
 
+        </P>
+    </div>
+
+    <div class="main1">
+        <h1>Select size</h1>
+        <div>
+            <button>S</button>
+            <button>M</button>
+            <button>x</button>
+            <button>XL</button>
+        </div>
+        <form action="">
+            
+            <input type="text" placeholder="Enter Address">
+            <input type="text" placeholder="pin Code">
+            <button><h1>PAYMENT NOW</h1></button>
+
+        </form>
+    </div>
+</div>
 
     
 </body>
@@ -311,7 +396,8 @@
 
     
       let cont=document.getElementById("main3")
-let cart1=JSON.parse(localStorage.getItem("cart"))
+let cart1=JSON.parse(localStorage.getItem("buy"))||[]
+display()
     function display(){
         let total=document.getElementById("cart-total")
     cont.innerHTML=""
@@ -335,6 +421,8 @@ let cart1=JSON.parse(localStorage.getItem("cart"))
             price.innerText="₹"+element.price
             let button1=document.createElement("button3")
             button1.innerText="BUY"
+
+            
             
 
             let button=document.createElement("button")
@@ -345,20 +433,20 @@ let cart1=JSON.parse(localStorage.getItem("cart"))
   cart1=cart1.filter((ele)=>{
     return ele.id!=element.id;
   })
-  localStorage.setItem("cart",JSON.stringify(cart1))
+  localStorage.setItem("buy",JSON.stringify(cart1))
 display()
 })
 
 Increment.addEventListener("click",()=>{
   element.quantity++
-   localStorage.setItem("cart",JSON.stringify(cart1))
+   localStorage.setItem("buy",JSON.stringify(cart1))
    display()
 })
 
 Decrement.addEventListener("click",()=>{
   if(element.quantity>1){
   element.quantity--
-   localStorage.setItem("cart",JSON.stringify(cart1))
+   localStorage.setItem("buy",JSON.stringify(cart1))
    display()}
 })
 
@@ -376,6 +464,6 @@ Decrement.addEventListener("click",()=>{
    total.textContent=sum
 
     }
-    display()
+
 </script>
 </html>

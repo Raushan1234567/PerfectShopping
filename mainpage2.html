@@ -87,6 +87,21 @@
             display: block;
              
         }
+        .nav div li:nth-child(1) {
+            font-size: 20px;
+            font-style: italic;
+        font-family: 'Times New Roman', Times, serif;
+        }
+        #fir:hover{
+            border-bottom: 2px solid rebeccapurple;
+
+        }
+        #fir1:hover{
+            border-bottom: 2px solid rebeccapurple;
+
+        }
+        
+        
         .nav div  ul {
             text-decoration: none;
             display: none;
@@ -95,6 +110,9 @@
              
         }
        
+        .nav:hover{
+            background-color: goldenrod;
+        }
        
         .nav div li:hover ul {
             
@@ -102,10 +120,19 @@
             display: block;
         
             background-color: white;
-            margin-top: 20px;
-            position: fixed;
-               
+            border-bottom: 2px solid grey;
+        
+            position:fixed;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 10px;
+padding: 30px 30px 10px 30px;
+background-color: goldenrod;
+margin-top: 5px;
+             
+
         }
+       
        
         #name{
                color: rgb(49, 36, 1);
@@ -124,6 +151,7 @@
         align-items: center;
         margin: auto;
         padding: 5px;
+
     }
     .offer img{
         width: 50px;
@@ -131,6 +159,9 @@
     }
     .offer p{
         margin-left: 30px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: rgb(107, 74, 1);
+    
     }
     .sliding{
         width:75%;
@@ -244,7 +275,7 @@
         <div>
             
            <i><h1 id="name">Easy shop</h1></i>
-           <li><a href="./women.html">WOMEN</a>
+           <li id="fir"><a href="./women.html">WOMEN</a>
             
         <ul>
             <li><a href="">Ethnic Wear</a> </li>
@@ -266,7 +297,29 @@
            
         </ul>
         </li>
-            <a href="./menshop.html">MEN</a>
+        <li id="fir1"><a href="./menshop.html">MEN</a>
+
+                 
+            <ul>
+                <li><a href="">Ethnic Wear</a> </li>
+                <li><a href=""> Kurta Kurtis</a> </li>
+                <li><a href="">Sarees</a> </li>
+                <li><a href="">Suits & Dress Materials</a> </li>
+                <li><a href="">Lehengas</a> </li>
+                <li><a href="">Blouses</a> </li>
+                <li><a href="">Leggings, Salwar & Churidaar</a> </li>
+                <li><a href="">Ethnic Dresses</a> </li>
+                <li><a href="">Ethnic Shrugs & Jackets</a> </li>
+                <li><a href="">Palazzos & Skirts</a> </li>
+                <li><a href="">Dupattas</a> </li>
+                <li><a href="">Shawls & Wraps</a> </li>
+                <li><a href="">Cloaks & Abaya</a> </li>
+    
+    
+    
+               
+            </ul>
+            </li>
             <a href="">KIDS</a>
            <a href="./home.html">HOME</a>
            <a href="">OFFER</a>
