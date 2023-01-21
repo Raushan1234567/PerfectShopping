@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Easy shop</title>
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <style>
         *{
             margin:0px;
@@ -17,7 +16,7 @@
             display: flex;
            position:fixed;
            top: 0;
-           background-color: rgb(246, 250, 250);
+           background-color: white;
         
             
             
@@ -88,6 +87,21 @@
             display: block;
              
         }
+        .nav div li:nth-child(1) {
+            font-size: 20px;
+            font-style: italic;
+        font-family: 'Times New Roman', Times, serif;
+        }
+        #fir:hover{
+            border-bottom: 2px solid rebeccapurple;
+
+        }
+        #fir1:hover{
+            border-bottom: 2px solid rebeccapurple;
+
+        }
+        
+        
         .nav div  ul {
             text-decoration: none;
             display: none;
@@ -95,6 +109,7 @@
           
              
         }
+       
         .nav:hover{
             background-color: goldenrod;
         }
@@ -114,6 +129,7 @@
 padding: 30px 30px 10px 30px;
 background-color: goldenrod;
 margin-top: 5px;
+             
 
         }
        
@@ -135,6 +151,7 @@ margin-top: 5px;
         align-items: center;
         margin: auto;
         padding: 5px;
+
     }
     .offer img{
         width: 50px;
@@ -146,16 +163,14 @@ margin-top: 5px;
         color: rgb(107, 74, 1);
     
     }
-    .carousel{
+    .sliding{
         width:75%;
       margin: auto;
       margin-top: 10px;
-    
      
     }
-    .carousel img{
+    .sliding img{
         height: 150px;
-        width: 100%;
      
         
     }
@@ -167,27 +182,19 @@ margin-top: 5px;
         gap: 12px;
         padding-left: 15px;
         box-shadow: 2px 2px 2px 2px rgb(240, 234, 234);
-        padding-top: 50px;
-        margin-bottom: 20px;
     
     }
     #main3 button{
         color:white;
-        background-color: rgb(80, 58, 2);
+        background-color: goldenrod;
         padding: 10px;
         border: none;
         margin-left: 50px;
         margin-top: 5px;
-        border-radius: 5px;
-
-    }
-    #main3 button:hover {
-        background-color: rgb(53, 2, 100);
 
     }
     #main3 div{
         box-shadow: 2px 2px 2px 2px rgb(240, 234, 234);
-        justify-content: center;
     }
     #main3 img{
         width: 80%;
@@ -196,21 +203,7 @@ margin-top: 5px;
     #main3 h2{
        color:rgb(111, 113, 224);
     }
-   
-    #sort{
-    color:white;
-    margin-left: 4px;
-    padding: 10px;
-    font-size: 15px;
-    border-radius: 15px;
-    background-color:rgb(105, 81, 18);
-    border:none;
-    margin-top: 15px;
-    
-       
-   }  
-   
-   #searchbar form{
+    #searchbar form{
      display: flex;
     
     
@@ -227,44 +220,17 @@ margin-top: 5px;
         padding: 5px;
         border-radius: 2px;
     }
-    #total1{
-        width: 145px;
-        font-size: 15px;
-        font-family:Arial, Helvetica, sans-serif;
-        font-weight:bolder;
-        font-style: italic;
-        color:white;
-        border: 1px solid black;
-        background-color:rgb(105, 81, 18);
-        border-radius: 15px;
-        padding: 5px;
-    }
-    #total2{
-        color:red;
-    }
-    #fir:hover{
-            border-bottom: 2px solid rebeccapurple;
-
-        }
-        #fir1:hover{
-            border-bottom: 2px solid rebeccapurple;
-
-        }
+        
+        
       
     </style>
 </head>
 <body>
-    
     <div class="navdown">
         <a href="./menshop.html"><h5>MEN</h5></a>
         <a href="./women.html"><h5>WOMEN</h5></a>
     </div>
 
-    <div>
-        <h1 id="total1">Total Products: <span id="total2">0</span></h1>
-     </div>
-   
-     
     <div class="navdown1">
         <a href=""><img src="https://img0.junaroad.com/images/icons/men/winter.png" alt="error"></a>
         <a href=""><img src="https://img0.junaroad.com/images/icons/men/tshirts.png" alt="error"></a>
@@ -281,22 +247,9 @@ margin-top: 5px;
         <a href=""><img src="https://img0.junaroad.com/images/icons/women/addons.png" alt="error"></a>
 
     </div>
-    
-
 <div class="border">
 
 </div>
-
-
-<div>
-    <select name="" id="sort">
-        <option value="">Sort</option>
-        <option value="LOW">LOW TO HIGH</option>
-        <option value="HIGH">HIGH TO LOW</option>
-        
-        
-    </select>
- </div>
 
 <div class="offer">
     <img src="https://img0.junaroad.com/assets/images/blue_annoucement.png" alt="error">
@@ -304,21 +257,16 @@ margin-top: 5px;
         Get FLAT 10% OFF on your purchase on payment via Paytm/ GPay/ PhonePe/ Net Banking/ Any Credit or Debit Card</p>
 </div>
 
-<div class="carousel" data-flickity='{"autoPlay":true, "wrapAround": true}'>
-
-  
-    <img src="https://img1.junaroad.com//assets/images/mobileNotif/img-1667388470485.jpg?crsl_pos=0" alt="error">
-    <img src="https://img1.junaroad.com//assets/images/mobileNotif/img-1658918101342.jpg?crsl_pos=0" alt="error">
-    <img src="https://img1.junaroad.com//assets/images/mobileNotif/img-1674029296684.jpg?crsl_pos=0" alt="">
-    <img src="https://img1.junaroad.com//assets/images/mobileNotif/img-1652694665568.jpg?crsl_pos=0" alt="">
-    <img src="https://img1.junaroad.com//assets/images/mobileNotif/img-1674044135107.jpg?crsl_pos=0" alt="">
-    <img src="https://img0.junaroad.com/images/banners/B2G1_13january2023_1673587401792.jpg?crsl_pos=0" alt="">
-    <img src="https://img1.junaroad.com//assets/images/mobileNotif/img-1667988209100.jpg?crsl_pos=0" alt="">
-    <img src="https://img1.junaroad.com//assets/images/mobileNotif/img-1673696931249.jpg?crsl_pos=0" alt="">
-
-
-
-</div>
+    <div class="sliding">
+        <marquee behavior="alternate" direction="right">
+            <img src="https://img1.junaroad.com//assets/images/mobileNotif/img-1667388470485.jpg?crsl_pos=0" alt="error">
+            <img src="https://img1.junaroad.com//assets/images/mobileNotif/img-1658918101342.jpg?crsl_pos=0" alt="error">
+            <img src="https://img1.junaroad.com//assets/images/mobileNotif/img-1674029296684.jpg?crsl_pos=0" alt="">
+            <img src="https://img1.junaroad.com//assets/images/mobileNotif/img-1652694665568.jpg?crsl_pos=0" alt="">
+            <img src="https://img1.junaroad.com//assets/images/mobileNotif/img-1674044135107.jpg?crsl_pos=0" alt="">
+        </marquee>
+    
+    </div>
 
    
 
@@ -326,7 +274,7 @@ margin-top: 5px;
         
         <div>
             
-           <a href="./mainpage.html"><i><h1 id="name">Easy shop</h1></i></a>
+           <i><h1 id="name">Easy shop</h1></i>
            <li id="fir"><a href="./women.html">WOMEN</a>
             
         <ul>
@@ -373,11 +321,13 @@ margin-top: 5px;
             </ul>
             </li>
             <a href="">KIDS</a>
-           <a href="./home2.html">HOME</a>
+           <a href="./home.html">HOME</a>
            <a href="">OFFER</a>
         
         </div>
 
+        
+           
         <div id="searchbar">
                 
                 
@@ -388,10 +338,12 @@ margin-top: 5px;
             </form>
     
     
-        <a href="./cart.html">CART</a>
+        <a href="">CART</a>
         <a href="./loginpage.html">PROFILE</a>
     
     </div>
+                
+    
     
     
 
@@ -401,163 +353,35 @@ margin-top: 5px;
 
 
     <div id="main3">
+        <div>
+           <a href="./women.html"><img src="https://img1.junaroad.com/stories/story_p_63bfe02ff47b700819353f81-1673521293.jpeg" alt="error"></a> 
+           
+        
 
+        </div>
+        <div>
+            <a href="./women.html"><img src="https://img2.junaroad.com/stories/story_p_635ffb93fd1d3c37070ee473-1673941987.jpeg" alt="error"></a>
+        </div>
+
+        <div>
+            <a href="./women.html"><img src="https://img0.junaroad.com/stories/story_p_635b50c7fd1d3c370709948c-1672760687.jpeg" alt="error"></a>
+        </div>
+        <div>
+            <a href="./women.html"><img src="https://img0.junaroad.com/stories/story_p_636411ecf47b70081a637eec-1671023028.jpeg" alt="error"></a>
+        </div>
+        
+        <div>
+            <a href="./women.html"><img src="https://img3.junaroad.com/stories/story_p_6343b7d0f380570819d2a475-1666254102.jpeg" alt="error"></a>
+        </div>
+        
+        <div>
+            <a href="./women.html"><img src="https://img2.junaroad.com/stories/story_p_63551459adb8b86556e46415-1670398594.jpeg" alt="error"></a>
+        </div>
+        
+        
     </div>
     
 
     
 </body>
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-<script>
-    let API="https://63c63a6b4ebaa8028541ae3f.mockapi.io/products?page=1&limit=15"
-    let sortapide="https://63c63a6b4ebaa8028541ae3f.mockapi.io/products?page=1&limit=14&sortBy=price&order=desc"
-    let sortapiasce="https://63c63a6b4ebaa8028541ae3f.mockapi.io/products?page=2&limit=16&sortBy=price&order=asc"
-
-    let fetchdata=[]
-  thenfetch()
-    function thenfetch(){
-        fetch(API)
-        .then((request)=>{
-             return request.json()
-        })
-        .then(data =>{
-               fetchdata=data
-               console.log(data)
-               display(data)
-        })
-        .catch(err=>{
-            console.log(err)
-        })
-
-
-    }
-
-    function thenfetch1(){
-        fetch(sortapide)
-        .then((request)=>{
-             return request.json()
-        })
-        .then(data =>{
-               fetchdata=data
-               console.log(data)
-               display(data)
-        })
-        .catch(err=>{
-            console.log(err)
-        })
-
-
-    }
-    function thenfetch2(){
-        fetch(sortapiasce)
-        .then((request)=>{
-             return request.json()
-        })
-        .then(data =>{
-               fetchdata=data
-               console.log(data)
-               display(data)
-        })
-        .catch(err=>{
-            console.log(err)
-        })
-
-
-    }
-
-
-
-    let sort=document.getElementById("sort")
-    sort.addEventListener("change",(e)=>{
-        e.preventDefault()
-        if(sort.value=="")
-        {
-            thenfetch()
-        }
-        else {
-            if(sort.value=="HIGH")
-            {
-                thenfetch1()
-                
-            }
-            else{
-                thenfetch2()
-            }
-        }
-    })
-    let total=document.getElementById("total2")
-      let cont=document.getElementById("main3")
-      let arr=JSON.parse(localStorage.getItem("cart"))||[]
-      let arr1=JSON.parse(localStorage.getItem("buy"))||[]
-    function display(data){
-    cont.innerHTML=""
-       data.forEach(element => {
-            
-
-            let card=document.createElement("div")
-            let img=document.createElement("img")
-            img.src=element.avatar
-            let name=document.createElement("h2")
-            name.innerText=element.name
-
-            let price=document.createElement("h2")
-            price.innerText="₹"+element.price
-      
-            let button1=document.createElement("button")
-            button1.innerText="BUY"
-            button1.addEventListener("click",()=>{
-                arr1.push({...element,quantity:1})
-                  localStorage.setItem("buy",JSON.stringify(arr1))
-                  window.location.href="./purchage.html"
-            })
-
-            let button=document.createElement("button")
-            button.innerText="ADD TO CART"
-            total.innerText=data.length;
-            button.addEventListener("click",(e)=>{
-                if(checkDuplicate(element)){
-                  alert("Product Already in Cart")
-                }else{
-                  arr.push({...element,quantity:1})
-                  localStorage.setItem("cart",JSON.stringify(arr))
-                  alert("Product Added To Cart")
-
-                }
-            })
-            
-            card.append(img,name,price,button,button1)
-            cont.append(card)
-            
-        });
-      
-
-    }
-    function  checkDuplicate(element){
-        for(let i=0;i<arr.length;i++){
-          if(arr[i].id===element.id){
-            return true
-          }
-        }
-        return false
-   }
-  
-   let inp=document.querySelector("form")
-    
-    inp.addEventListener("submit",(e)=>{
-    
-      e.preventDefault()
-      let search=document.getElementById("search").value
-      let fill=fetchdata.filter(element =>{
-    if(element.name.toUpperCase().includes(search.toUpperCase())==true){
-      return true
-    }else{
-      return false
-    }
-      })
-      display(fill)
-      console.log(fill)
-    })
-
-   
-</script>
 </html>

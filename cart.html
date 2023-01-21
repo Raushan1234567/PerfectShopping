@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Easy shop</title>
+    <link rel="icon" href="./logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <style>
         *{
@@ -17,14 +18,11 @@
             display: flex;
            position:fixed;
            top: 0;
-           background-color: rgb(246, 250, 250);
+           background-color: white;
         
             
             
             box-shadow: 2px 2px 2px 2px rgb(214, 191, 191);
-        }
-        .nav:hover{
-            background-color: goldenrod;
         }
         .nav div:nth-child(1) {
             text-decoration: none;
@@ -56,13 +54,18 @@
             display: flex;
             margin-left: 200px;
             margin-top: 90px;
-            width: 200px;
+        flex-direction: row-reverse;
             justify-content: space-around;
             
           
         }
-        .navdown a{
+        .navdown a:nth-child(1){
             text-decoration: none;
+            margin-left: 10px;
+        }
+        .navdown a:nth-child(2){
+            text-decoration: none;
+            margin-left: 10px;
         }
         .navdown1{
             width: 70%;
@@ -106,18 +109,10 @@
             display: block;
         
             background-color: white;
-            border-bottom: 2px solid grey;
-        
-            position:fixed;
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-            gap: 10px;
-padding: 30px 30px 10px 30px;
-background-color: goldenrod;
-margin-top: 5px;    
-
+            margin-top: 20px;
+            position: fixed;
+               
         }
-       
        
         #name{
                color: rgb(49, 36, 1);
@@ -143,9 +138,6 @@ margin-top: 5px;
     }
     .offer p{
         margin-left: 30px;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        color: rgb(107, 74, 1);
-    
     }
     .carousel{
         width:75%;
@@ -169,26 +161,46 @@ margin-top: 5px;
         padding-left: 15px;
         box-shadow: 2px 2px 2px 2px rgb(240, 234, 234);
         padding-top: 50px;
-        margin-bottom: 20px;
     
     }
     #main3 button{
         color:white;
-        background-color: rgb(80, 58, 2);
-        padding: 10px;
+        background-color: goldenrod;
+        padding: 5px;
         border: none;
-        margin-left: 50px;
+        margin-left: 10px;
         margin-top: 5px;
-        border-radius: 5px;
+        border-radius: 10px;
 
+        
     }
-    #main3 button:hover {
-        background-color: rgb(53, 2, 100);
+    #main3 button3{
+        color:white;
+        background-color: orangered;
+        padding: 5px;
+        border: none;
+        margin-left: 20px;
+        margin-top: 5px;
+        border-radius: 10px;
 
+        
     }
+    #main3 button1{
+        color:white;
+        background-color: goldenrod;
+        padding: 5px;
+        border: none;
+        margin-right: 70px;
+        margin-top: 5px;
+        border-radius: 10px;
+
+        
+    }
+
+    
     #main3 div{
         box-shadow: 2px 2px 2px 2px rgb(240, 234, 234);
-        justify-content: center;
+        padding-bottom: 20px;
     }
     #main3 img{
         width: 80%;
@@ -197,19 +209,16 @@ margin-top: 5px;
     #main3 h2{
        color:rgb(111, 113, 224);
     }
-   
-    #sort{
+   #sort{
     color:white;
-    margin-left: 4px;
+    margin-left: 12px;
     padding: 10px;
-    font-size: 15px;
+    font-size: 20px;
     border-radius: 15px;
-    background-color:rgb(105, 81, 18);
+    background-color: brown;
     border:none;
-    margin-top: 15px;
-    
        
-   }  
+   }
    #searchbar form{
      display: flex;
     
@@ -227,44 +236,30 @@ margin-top: 5px;
         padding: 5px;
         border-radius: 2px;
     }
-    #total1{
-        width: 145px;
-        font-size: 15px;
-        font-family:Arial, Helvetica, sans-serif;
-        font-weight:bolder;
-        font-style: italic;
-        color:white;
-        border: 1px solid black;
-        background-color:rgb(105, 81, 18);
-        border-radius: 15px;
-        padding: 5px;
-    }
-    #total2{
-        color:red;
-    } 
-    #fir:hover{
-            border-bottom: 2px solid rebeccapurple;
-
-        }
-        #fir1:hover{
-            border-bottom: 2px solid rebeccapurple;
-
-        }
+      #total{
+        color:goldenrod;
+        font-size: 20px;
+        width: 250px;
+        margin-top: 20px;
+        margin: auto;
+        border: 2px solid green;
+        border-radius: 5px;
+        
+      }
+        
       
     </style>
 </head>
 <body>
     <div class="navdown">
+        <h1 id="total">Your Total cart Price is:- <span id="cart-total">0</span></h1>
         <a href="./menshop.html"><h5>MEN</h5></a>
         <a href="./women.html"><h5>WOMEN</h5></a>
     </div>
 
 
-    <div>
-        <h1 id="total1">Total Products: <span id="total2">0</span></h1>
-     </div>
 
-    
+
 
     <div class="navdown1">
         <a href=""><img src="https://img0.junaroad.com/images/icons/women/winter.png" alt="error"></a>
@@ -286,15 +281,6 @@ margin-top: 5px;
 <div class="border">
 
 </div>
-<div>
-    <select name="" id="sort">
-        <option value="">Sort</option>
-        <option value="LOW">LOW TO HIGH</option>
-        <option value="HIGH">HIGH TO LOW</option>
-        
-        
-    </select>
- </div>
 
 <div class="offer">
     <img src="https://img0.junaroad.com/assets/images/blue_annoucement.png" alt="error">
@@ -323,7 +309,7 @@ margin-top: 5px;
         <div>
             
             <a href="./mainpage2.html"><i><h1 id="name">Easy shop</h1></i></a>
-           <li id="fir"><a href="./women.html">WOMEN</a>
+           <li><a href="./women.html">WOMEN</a>
             
         <ul>
             <li><a href="">Ethnic Wear</a> </li>
@@ -345,29 +331,7 @@ margin-top: 5px;
            
         </ul>
         </li>
-            <li id="fir1"><a href="./menshop.html">MEN</a>
-
-                 
-        <ul>
-            <li><a href="">Ethnic Wear</a> </li>
-            <li><a href=""> Kurta Kurtis</a> </li>
-            <li><a href="">Sarees</a> </li>
-            <li><a href="">Suits & Dress Materials</a> </li>
-            <li><a href="">Lehengas</a> </li>
-            <li><a href="">Blouses</a> </li>
-            <li><a href="">Leggings, Salwar & Churidaar</a> </li>
-            <li><a href="">Ethnic Dresses</a> </li>
-            <li><a href="">Ethnic Shrugs & Jackets</a> </li>
-            <li><a href="">Palazzos & Skirts</a> </li>
-            <li><a href="">Dupattas</a> </li>
-            <li><a href="">Shawls & Wraps</a> </li>
-            <li><a href="">Cloaks & Abaya</a> </li>
-
-
-
-           
-        </ul>
-        </li>
+            <a href="./menshop.html">MEN</a>
             <a href="">KIDS</a>
            <a href="./home2.html">HOME</a>
            <a href="">OFFER</a>
@@ -384,7 +348,7 @@ margin-top: 5px;
             </form>
     
     
-        <a href="./cart.html">CART</a>
+        <a href="">CART</a>
         <a href="./loginpage.html">PROFILE</a>
     
     </div>
@@ -406,101 +370,34 @@ margin-top: 5px;
     
 </body>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-<script  >
-
-    let sortapide="https://63c63a6b4ebaa8028541ae3f.mockapi.io/products?page=2&limit=15&sortBy=price&order=desc"
-    let sortapiasce="https://63c63a6b4ebaa8028541ae3f.mockapi.io/products?page=2&limit=15&sortBy=price&order=asc"
-   
-let API="https://63c63a6b4ebaa8028541ae3f.mockapi.io/products?page=2&limit=15"
-
-
-    let fetchdata=[]
+<script>
 
     
-  thenfetch()
-    function thenfetch(){
-        fetch(API)
-        .then((request)=>{
-             return request.json()
-        })
-        .then(data =>{
-               fetchdata=data
-               console.log(data)
-               display(data)
-        })
-        .catch(err=>{
-            console.log(err)
-        })
-
-
-    }
-    function thenfetch1(){
-        fetch(sortapide)
-        .then((request)=>{
-             return request.json()
-        })
-        .then(data =>{
-               fetchdata=data
-               console.log(data)
-               display(data)
-        })
-        .catch(err=>{
-            console.log(err)
-        })
-
-
-    }
-    function thenfetch2(){
-        fetch(sortapiasce)
-        .then((request)=>{
-             return request.json()
-        })
-        .then(data =>{
-               fetchdata=data
-               console.log(data)
-               display(data)
-        })
-        .catch(err=>{
-            console.log(err)
-        })
-
-
-    }
-
-    let sort=document.getElementById("sort")
-    sort.addEventListener("change",(e)=>{
-        e.preventDefault()
-        if(sort.value=="")
-        {
-            thenfetch()
-        }
-        else {
-            if(sort.value=="HIGH")
-            {
-                thenfetch1()
-                
-            }
-            else{
-                thenfetch2()
-            }
-        }
-    })
-    let total=document.getElementById("total2")
       let cont=document.getElementById("main3")
-      let arr=JSON.parse(localStorage.getItem("cart"))||[]
-      let arr1=JSON.parse(localStorage.getItem("buy"))||[]
-    function display(data){
+let cart1=JSON.parse(localStorage.getItem("cart"))
+let arr1=JSON.parse(localStorage.getItem("buy"))
+    function display(){
+        let total=document.getElementById("cart-total")
     cont.innerHTML=""
-       data.forEach(element => {
+       cart1.forEach(element => {
+            
+
             let card=document.createElement("div")
             let img=document.createElement("img")
             img.src=element.avatar
             let name=document.createElement("h2")
             name.innerText=element.name
+            let quantity = document.createElement("span");
+            quantity.textContent=element.quantity
+
+            let Increment = document.createElement("button");
+        let Decrement = document.createElement("button1");
+        Increment.textContent="+"
+        Decrement.textContent="-"
 
             let price=document.createElement("h2")
             price.innerText="₹"+element.price
-            let button1=document.createElement("button")
+            let button1=document.createElement("button3")
             button1.innerText="BUY"
             button1.addEventListener("click",()=>{
                 arr1.push({...element,quantity:1})
@@ -509,52 +406,44 @@ let API="https://63c63a6b4ebaa8028541ae3f.mockapi.io/products?page=2&limit=15"
             })
 
             let button=document.createElement("button")
-            button.innerText="ADD TO CART"
-            total.innerText=data.length;
+            button.innerText="REMOVE"
 
             button.addEventListener("click",(e)=>{
-                if(checkDuplicate(element)){
-                  alert("Product Already in Cart")
-                }else{
-                  arr.push({...element,quantity:1})
-                  localStorage.setItem("cart",JSON.stringify(arr))
-                  alert("Product Added To Cart")
+                e.preventDefault()
+  cart1=cart1.filter((ele)=>{
+    return ele.id!=element.id;
+  })
+  localStorage.setItem("cart",JSON.stringify(cart1))
+display()
+})
 
-                }
-            })
+Increment.addEventListener("click",()=>{
+  element.quantity++
+   localStorage.setItem("cart",JSON.stringify(cart1))
+   display()
+})
+
+Decrement.addEventListener("click",()=>{
+  if(element.quantity>1){
+  element.quantity--
+   localStorage.setItem("cart",JSON.stringify(cart1))
+   display()}
+})
+
             
-            card.append(img,name,price,button,button1)
+            
+            card.append(img,name,price,button,Increment, quantity,Decrement,button1)
             cont.append(card)
             
         });
-       
-        
+
+        let sum=0
+      for(let i=0;i<cart1.length;i++){
+        sum+=cart1[i].price*cart1[i].quantity
+      }
+   total.textContent=sum
+
     }
-    function  checkDuplicate(element){
-        for(let i=0;i<arr.length;i++){
-          if(arr[i].id===element.id){
-            return true
-          }
-        }
-        return false
-   }
-   let inp=document.querySelector("form")
-    
-    inp.addEventListener("submit",(e)=>{
-    
-      e.preventDefault()
-      let search=document.getElementById("search").value
-      let fill=fetchdata.filter(element =>{
-    if(element.name.toUpperCase().includes(search.toUpperCase())==true){
-      return true
-    }else{
-      return false
-    }
-      })
-      display(fill)
-    
-    
-    })
-    // total.innerText=fetchdata.length;
+    display()
 </script>
 </html>
