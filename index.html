@@ -13,10 +13,11 @@
         }
     .background{
         background-image: url('https://images.pexels.com/photos/14876612/pexels-photo-14876612.jpeg?auto=compress&cs=tinysrgb&w=600');
-            background-size: 100% ;
-            
+            background-size: 100% 300% ;
             height: 100vh;
-            background-repeat:inherit;
+            
+            
+        
             text-align: center;
             color: white;
             align-items: center;
@@ -27,6 +28,15 @@
     }
    
    
+    .background div button{
+        padding: 20px;
+        background-color: rgb(127, 192, 7);
+        color: bold black;
+        border: none;
+        border-radius: 10px;
+        width:300px
+        
+    }
     .background div button{
         padding: 20px;
         background-color: rgb(127, 192, 7);
@@ -56,6 +66,68 @@
         #ind{
             font-weight: 100px;
             font-family:var(444);
+            
+        }
+
+        @media all and (min-width: 100px) and (max-width: 450px){
+            .background{
+        background-image: url('https://images.pexels.com/photos/14876612/pexels-photo-14876612.jpeg?auto=compress&cs=tinysrgb&w=600');
+            background-size: 100% 200% ;
+            
+        
+           
+            text-align: center;
+            color: white;
+            align-items: center;
+
+    }
+    /* .background img{
+        width: 200px;
+    }
+   
+    */
+    .background div button{
+        padding: 20px;
+        background-color:rgb(78, 57, 3);
+        color: white;
+        border: none;
+        border-radius: 10px;
+    width: 100px;
+
+    }
+    .background div:nth-child(2) button{
+        padding: 20px;
+        background-color:rgb(78, 57, 3);
+        color: white;
+        border: none;
+        border-radius: 10px;
+    width: 150px;
+    margin-bottom: 30px;
+
+    }
+    
+    
+        #tag{
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            accent-color: white;
+            color: rgb(255, 255, 255);
+            padding: 40px;
+        }
+        .button button{
+            margin-top: 250px;
+            font-size: 10px;
+        
+        }
+        .background a{
+            color: rgb(245, 230, 220);
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            padding: 10px;
+        }
+        #ind{
+            font-weight: 100px;
+            font-family:var(444);
+        
+        }
         }
        
     </style>

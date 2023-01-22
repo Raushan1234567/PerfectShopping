@@ -19,6 +19,15 @@
             
             box-shadow: 2px 2px 2px 2px rgb(214, 191, 191);
         }
+        .nav:hover{
+            background-color: rgb(122, 89, 6);
+        }
+        .nav:hover a{
+            color:white;
+        }
+        .nav:hover h1{
+            color: white;
+        }
         .nav div:nth-child(1){
             text-decoration: none;
             display: flex;
@@ -51,16 +60,31 @@
         flex-direction: column;
         align-items: center;
         
-        
+        padding: 5px;
   border: none;
+  border-radius: 10px;
+  
+        }
+        #form1 input{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        padding: 5px;
+background-color: rgb(92, 67, 5);
+  border-radius: 10px;
+  color: white;
+  border: none;
+  
         }
         #submit{
             margin-top: 30px;
             border: none;
-            background-color: coral;
+            background-color:rgb(61, 49, 1);
             padding: 10px;
-            color: white;
-            text-decoration: none;
+            color: rgb(168, 3, 3);
+        
+            border-radius: 5px;
             
         }
         #pass{
@@ -69,7 +93,7 @@
         }
         .main2{
             text-align: center;
-            color:red;
+            color: rgb(75, 54, 2);
             
         }
         /* body{
@@ -88,8 +112,11 @@
         .main2 img{
             width:20%;
             margin-top: 50px;
+            background-color:rgb(134, 98, 5);
+            padding: 8px;
         }
         #submit a{
+            color: white;
             text-decoration: none;
         }
         </style>
@@ -136,7 +163,7 @@
         <input type="email" placeholder="Enter your email address" id="email"  >
        
        
-        <input type="password" placeholder=" put password" id="pass">
+        <input type="text" placeholder=" put password" id="pass">
      <button id="submit"><a href="./menshop.html">Signin</a></button>
     </div>
 </body>
