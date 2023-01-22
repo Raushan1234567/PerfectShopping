@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Easy shop</title>
+    <link rel="icon" href="./logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <style>
         *{
@@ -17,14 +18,11 @@
             display: flex;
            position:fixed;
            top: 0;
-           background-color: rgb(246, 250, 250);
+           background-color: white;
         
             
             
             box-shadow: 2px 2px 2px 2px rgb(214, 191, 191);
-        }
-        .nav:hover{
-            background-color: goldenrod;
         }
         .nav div:nth-child(1) {
             text-decoration: none;
@@ -56,13 +54,18 @@
             display: flex;
             margin-left: 200px;
             margin-top: 90px;
-            width: 200px;
+        flex-direction: row-reverse;
             justify-content: space-around;
             
           
         }
-        .navdown a{
+        .navdown a:nth-child(1){
             text-decoration: none;
+            margin-left: 10px;
+        }
+        .navdown a:nth-child(2){
+            text-decoration: none;
+            margin-left: 10px;
         }
         .navdown1{
             width: 70%;
@@ -106,18 +109,10 @@
             display: block;
         
             background-color: white;
-            border-bottom: 2px solid grey;
-        
-            position:fixed;
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-            gap: 10px;
-padding: 30px 30px 10px 30px;
-background-color: goldenrod;
-margin-top: 5px;    
-
+            margin-top: 20px;
+            position: fixed;
+               
         }
-       
        
         #name{
                color: rgb(49, 36, 1);
@@ -143,9 +138,6 @@ margin-top: 5px;
     }
     .offer p{
         margin-left: 30px;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        color: rgb(107, 74, 1);
-    
     }
     .carousel{
         width:75%;
@@ -169,216 +161,67 @@ margin-top: 5px;
         padding-left: 15px;
         box-shadow: 2px 2px 2px 2px rgb(240, 234, 234);
         padding-top: 50px;
-        margin-bottom: 20px;
     
     }
     #main3 button{
         color:white;
-        background-color: rgb(80, 58, 2);
-        padding: 10px;
+        background-color: goldenrod;
+        padding: 5px;
         border: none;
-        margin-left: 50px;
+        margin-left: 10px;
         margin-top: 5px;
-        border-radius: 5px;
-
-    }
-    #main3 button:hover {
-        background-color: rgb(53, 2, 100);
-
-    }
-    #main3 div{
-        box-shadow: 2px 2px 2px 2px rgb(240, 234, 234);
-        justify-content: center;
-        padding-bottom: 12px;
         border-radius: 10px;
+
+        
     }
-    #main3 div img{
-        box-shadow: 2px 2px 2px 2px rgb(240, 234, 234);
-        justify-content: center;
-    }
-    #main3 img{
-        width: 80%;
-        height: 350px;
-        justify-content: center;
+    #main3 button3{
+        color:white;
+        background-color: orangered;
+        padding: 5px;
+        border: none;
         margin-left: 20px;
-    }
-    #main3 h2{
-       color:rgb(111, 113, 224);
-       margin-left:20px ;
-    }
-   
-    #sort{
-    color:white;
-    margin-left: 4px;
-    padding: 10px;
-    font-size: 15px;
-    border-radius: 15px;
-    background-color:rgb(105, 81, 18);
-    border:none;
-    margin-top: 15px;
-    
-       
-   }  
-   #searchbar form{
-     display: flex;
-    
-    
-    }
-    #search{
-        border-radius: 2px;
-        display: block;
-        border: 1px solid goldenrod;
-        color:black;
-    }
-    #submit{
-        background-color: rgb(44, 39, 8);
-        color: white;
-        padding: 5px;
-        border-radius: 2px;
-    }
-    #total1{
-        width: 145px;
-        font-size: 15px;
-        font-family:Arial, Helvetica, sans-serif;
-        font-weight:bolder;
-        font-style: italic;
-        color:white;
-        border: 1px solid black;
-        background-color:rgb(105, 81, 18);
-        border-radius: 15px;
-        padding: 5px;
-    }
-    #total2{
-        color:red;
-    } 
-    #fir:hover{
-            border-bottom: 2px solid rebeccapurple;
-
-        }
-        #fir1:hover{
-            border-bottom: 2px solid rebeccapurple;
-
-        }
-
-        @media all and (min-width: 100px) and (max-width: 450px){
-            #main3{
-        width:70%;
-       margin-right: 130px;
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        gap: 12px;
-        padding-left: 15px;
-        box-shadow: 2px 2px 2px 2px rgb(240, 234, 234);
-        padding-top: 50px;
-        margin-bottom: 20px;
-    
-    }
-    #main3 button{
-        color:white;
-        background-color: rgb(80, 58, 2);
-        padding: 10px;
-        border: none;
-        margin-left: 50px;
         margin-top: 5px;
-        border-radius: 5px;
+        border-radius: 10px;
 
+        
     }
-    #main3 button:hover {
-        background-color: rgb(53, 2, 100);
+    #main3 button1{
+        color:white;
+        background-color: goldenrod;
+        padding: 5px;
+        border: none;
+        margin-right: 70px;
+        margin-top: 5px;
+        border-radius: 10px;
 
+        
     }
+
+    
     #main3 div{
         box-shadow: 2px 2px 2px 2px rgb(240, 234, 234);
-        justify-content: center;
-        padding-bottom: 12px;
-        border-radius: 10px;
-    }
-    #main3 div img{
-        box-shadow: 2px 2px 2px 2px rgb(240, 234, 234);
-        justify-content: center;
-        
+        padding-bottom: 20px;
     }
     #main3 img{
         width: 80%;
         height: 350px;
-        margin-left: 30px;
-
-       
     }
     #main3 h2{
        color:rgb(111, 113, 224);
     }
-    .nav {
-            width: 100%;
-            height: 80px;
-            display: flex;
-           position:fixed;
-           top: 0;
-           background-color: rgb(246, 250, 250);
-           flex-direction: column;
-        
-            
-            
-            box-shadow: 2px 2px 2px 2px rgb(214, 191, 191);
-        }
-        .nav div:nth-child(1) {
-            text-decoration: none;
-            display: flex;
-            width: 80%;
-            justify-content: space-around;
-            align-items: center;
-            margin-left: 15px;
-            margin-left: 5px;
-            margin-top: 12px;
-
-        }
-        .nav div:nth-child(1) a {
-            text-decoration: none;
-            font-size: 13px;
-           
-        }
-        .nav div:nth-child(1) h1 {
-            text-decoration: none;
-            font-size: 20px;
-           
-        }
-        .nav div:nth-child(2){
-        
-            
-            width: 30%;
-        display: flex;
-        margin-left: 250px;
-            align-items: center;
-            justify-content: center;
-
-        }
-        .nav div:nth-child(2) a {
-            text-decoration: none;
-            font-size: 13px;
-            margin-top: 12px;
-            margin-right: 100px;
-        }
-       
-        #sort{
+   #sort{
     color:white;
-    margin-left: 4px;
+    margin-left: 12px;
     padding: 10px;
-    font-size: 15px;
+    font-size: 20px;
     border-radius: 15px;
-    background-color:rgb(105, 81, 18);
+    background-color: brown;
     border:none;
-    margin-top: 15px;
-    margin-left: 100px;
-   
-    
        
-   }  
-   
+   }
    #searchbar form{
      display: flex;
-    margin-top: 12px;
-    font-size: 12px;
-    margin-right: 12px;
+    
     
     }
     #search{
@@ -386,7 +229,6 @@ margin-top: 5px;
         display: block;
         border: 1px solid goldenrod;
         color:black;
-        font-size: 12px;
     }
     #submit{
         background-color: rgb(44, 39, 8);
@@ -394,41 +236,208 @@ margin-top: 5px;
         padding: 5px;
         border-radius: 2px;
     }
-    .offer{
-        width: 70%;
+      #total{
+        color:goldenrod;
+        font-size: 20px;
+        width: 250px;
+        margin-top: 20px;
+        margin: auto;
+        border: 2px solid green;
+        border-radius: 5px;
         
-        display: flex;
-        align-items: center;
-       margin-top: 30px;
-        padding: 5px;
-        text-align: justify;
-        margin-left: 30px;
+      }
+        
+      #endber>h2{
+padding-top: 40px;
+  }
+ #endber{
+   padding-left: 30px;
+    background-color: rgb(34, 34, 38);
+    color: yellow;
+    height: 300px;
+    margin-top: 30px;
+ }
+ a{ 
+    text-decoration: none;
+    color: black;
     }
-    .navdown{
-            display: flex;
-            margin-left: 200px;
-            margin-top: 90px;
-            width: 200px;
-            justify-content: space-around;
+ .manN:hover {
+    border-bottom: 4px solid rgb(0, 210, 221) ;
+    }
+    .womanN:hover {
+    border-bottom: 4px solid rgb(0, 210, 221) ;
+    }
+    .nobileN:hover {
+    border-bottom: 4px solid rgb(0, 210, 221) ;
+    }
+   #count{
+    margin-top: 150px;margin-left: 100px
+   } 
+  #main_cart{
+   
+    width: 70%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 19px;
+  }  
+  #main_cart div{
+width: 95%;
+margin: auto;
+background-color: #f1f0f0;
+  }
+  #main_cart img{
+width: 100%;
+  }
+  #main_cart h4{
+    margin-left: 10px;
+    margin-top: 0px;
+color: #6c6c6c;
+font-size: small;
+  }
+  #main_cart p{
+    margin-left: 10px;
+    margin-top: -1px;
+    color: #515151;
+    font-size: small;
+      }
+      #main_cart h1{
+        margin-top: -10px;
+        margin-left: 10px;
+        color: #000000;
+        font-size: 25px;
+          }
+          #scarch{
+            height: 30px;
+            width: 250px;
+            border: none;
+            background-color: rgb(238, 238, 238);
+            border-radius: 8px;
             
-          
-        }
-        }
-      
+          }
+          #main_cart button{
+            padding: 7px 13px 7px 13px;
+            margin-left: 30px;
+           border-radius: 9px;
+           border: none;
+           background-color: #2cb0c8;
+           color: white;
+           font-size: 16px;
+           text-align: center;
+              }
+              #main_cart button:hover{
+                
+               background-color: #74d9da;
+                  }
+  #filter{
+  align-items: flex-end;
+   margin-left: 83%;
+   margin-bottom: 70px;
+   border: none;
+  font-size: 15px;
+   border-radius: 9px;
+   width: 80px;
+  }
+  #endber>h2{
+    padding-top: 40px;
+      }
+    
+     
+     #endber>div{
+      display: flex;
+  width: 80%;
+  margin: auto;
+  
+     }
+     #line1>p{
+      color: white
+         }
+         #line2{
+          margin-left: 60px;
+  margin-top: 44px;
+    }
+   #line2>p{
+    color: white;     
+   }
+  #line2>img{
+  width: 30%;
+     }
+     #line3{
+  margin-top: 44px;
+     }
+     #line3>p{
+      color: white;      
+     }
+     #line3>h5{
+        margin-top: 80px;  
+     }
+     #line4{
+      margin-top: 44px;
+      margin-left: 60px;
+     }
+   #line4>input{
+  background-color: rgb(34, 34, 38);
+  border: none;
+   border-bottom: solid yellow;
+   color: #f1f1f1;
+   
+   }
+   #line4>button{
+  background-color: yellow;
+  font-size:17px;
+  padding: 10px 15px 10px 15px;
+  margin-top: 10px;
+  
+   }
+   #endber{
+     background-color: rgb(34, 34, 38);
+     color: yellow;
+  height: 100%;
+  }
+  #endber>hr{
+  width: 80%;
+  }
+  #nd2{
+    display: flex;
+  color: white;
+  }
+  .linea{
+  font-size: 15px;
+  }
+  .lineb{
+    margin-left: 70px;
+  }
+  .linec{
+  margin-left: 70px;
+  }
+  .lined{
+    margin-top: 17px;
+    margin-left: 150px;
+    color: aqua;
+    font-size: 22px;
+  }
+  #BT{
+   
+    width: 80%;
+    margin: auto;
+    color: #f1f1f1;
+  }
+  #add1{
+    margin-top: 10px;
+
+  }
     </style>
 </head>
 <body>
     <div class="navdown">
+        <h1 id="total">Your Total cart Price is:- <span id="cart-total">0</span></h1>
         <a href="./menshop.html"><h5>MEN</h5></a>
         <a href="./women.html"><h5>WOMEN</h5></a>
     </div>
 
 
-    <div>
-        <h1 id="total1">Total Products: <span id="total2">0</span></h1>
-     </div>
 
-    
+
 
     <div class="navdown1">
         <a href=""><img src="https://img0.junaroad.com/images/icons/women/winter.png" alt="error"></a>
@@ -450,15 +459,6 @@ margin-top: 5px;
 <div class="border">
 
 </div>
-<div>
-    <select name="" id="sort">
-        <option value="">Sort</option>
-        <option value="LOW">LOW TO HIGH</option>
-        <option value="HIGH">HIGH TO LOW</option>
-        
-        
-    </select>
- </div>
 
 <div class="offer">
     <img src="https://img0.junaroad.com/assets/images/blue_annoucement.png" alt="error">
@@ -487,7 +487,7 @@ margin-top: 5px;
         <div>
             
             <a href="./mainpage2.html"><i><h1 id="name">Easy shop</h1></i></a>
-           <li id="fir"><a href="./women.html">WOMEN</a>
+           <li><a href="./women.html">WOMEN</a>
             
         <ul>
             <li><a href="">Ethnic Wear</a> </li>
@@ -509,29 +509,7 @@ margin-top: 5px;
            
         </ul>
         </li>
-            <li id="fir1"><a href="./menshop.html">MEN</a>
-
-                 
-        <ul>
-            <li><a href="">Ethnic Wear</a> </li>
-            <li><a href=""> Kurta Kurtis</a> </li>
-            <li><a href="">Sarees</a> </li>
-            <li><a href="">Suits & Dress Materials</a> </li>
-            <li><a href="">Lehengas</a> </li>
-            <li><a href="">Blouses</a> </li>
-            <li><a href="">Leggings, Salwar & Churidaar</a> </li>
-            <li><a href="">Ethnic Dresses</a> </li>
-            <li><a href="">Ethnic Shrugs & Jackets</a> </li>
-            <li><a href="">Palazzos & Skirts</a> </li>
-            <li><a href="">Dupattas</a> </li>
-            <li><a href="">Shawls & Wraps</a> </li>
-            <li><a href="">Cloaks & Abaya</a> </li>
-
-
-
-           
-        </ul>
-        </li>
+            <a href="./menshop.html">MEN</a>
             <a href="">KIDS</a>
            <a href="./home2.html">HOME</a>
            <a href="">OFFER</a>
@@ -548,7 +526,7 @@ margin-top: 5px;
             </form>
     
     
-        <a href="./cart.html">CART</a>
+        <a href="">CART</a>
         <a href="./loginpage.html">PROFILE</a>
     
     </div>
@@ -566,105 +544,153 @@ margin-top: 5px;
 
     </div>
 
+    <div id="endber">
 
+        <div>
+    
+            <div id="line1">
+                <h2>EASY SHOP</h2>     
+               <h4>CUSTOMER SERVICE</h4> 
+               <p>Contact Us <br>
+                Track Order<br>
+                Return Order<br>
+                Cancel Order</p><br>
+                <p>
+                    15 Days return policy* <br>
+                    Cash on delivery*
+                </p>
+            </div>
+       <div id="line2">
+        <h4>COMPANY</h4>
+        <p>
+            About Us <br>
+    We're Hiring<br>
+    Terms & Conditions<br>
+    Privacy Policy<br>
+    Blog
+        </p>
+       
+        <img src="https://images.bewakoof.com/web/app_android_v1.png" alt="">
+        <img src="https://images.bewakoof.com/web/app_ios_v1.png" alt="">
+       </div>
+       <div id="line3">
+        <h4>CONNECT WITH US</h4>
+        <p>4.7M People Like this <br>
+            1M Followers</p>
+            <h5>100% SECURE PAYMENT</h5>
+            <img src="https://images.bewakoof.com/web/secure-payments-image.png" alt="">
+       </div>
+       <div id="line4">
+        <h4>KEEP UP TO DATE</h4>
+        <input type="text" name="" id="add1"><button>SUBSCRIBE</button>
+       </div>
+    
+       </div>
+    
+    <hr>
+    
+    <div  id="nd2">
+        <div class="linea">
+    <h4>MEN'S CLOTHING</h4>
+    <p>
+        Top Wear <br>
+    Men's New Arrivals<br>
+    Men's Half Sleeve T-Shirts<br>
+    Men's Hoodies & Sweatshirts<br>
+    Men's Long Sleeve T-shirts<br>
+    Men's Printed T-shirts<br>
+    Men's Plain T-shirts<br>
+    Men's Vests<br>
+    Men's Polo T-Shirts<br>
+    Men's Kurtas<br>
+    Men's Combo T-Shirts<br>
+    Men's Shirts<br>
+    Men's Nightwear<br>
+    Men's Plus Size Store<br>
+    <br>
+    Bottom Wear<br>
+    Men's Pajamas<br>
+    Men's Boxer Shorts<br>
+    Men's Shorts<br>
+    Men's Track Pants<br>
+    Men's Pants<br>
+    <br>
+    Featured<br>
+    Men's Flip Flops<br>
+    Men's Sliders<br>
+    Marvel T-Shirts<br>
+    Disney T-Shirts<br>
+    Avengers T-Shirts<br>
+    Star Wars T-Shirts<br>
+    Batman T-Shirts<br>
+    Superman T-Shirts<br>
+    Joker T-Shirts<br>
+    </p></div>
+        
+    
+    <div class="lineb">
+    <h4>WOMEN'S CLOTHING</h4>
+    <p>
+        Women's Top Wear <br>
+        Women's New Arrivals<br>
+        Women's T-Shirts<br>
+        Women's Hoodies & Sweatshirts<br>
+        Women's Dresses<br>
+        Women's 3/4 Sleeve T-Shirts<br>
+        Women's Kurtis<br>
+        Women's Combo T-Shirts<br>
+        Women's Nightwear<br>
+        Women's Plus Size Store<br>
+        <br>
+        Women's Bottom Wear<br>
+        Women's Pajamas<br>
+        Women's Boxer Shorts<br>
+        Women's Jeans<br>
+        Women's Joggers<br>
+        Women's Shorts<br><br>
+        BAGS<br>
+        Laptop Bags<br>
+        Small Backpacks<br><br>
+        Featured<br>
+        Women's Slides<br>
+        Women's Flip Flops<br>
+    </p>
+    </div>
+    
+    
+    </div>
+    </div>
     
 </body>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-<script  >
-
-    let sortapide="https://63c63a6b4ebaa8028541ae3f.mockapi.io/products?page=2&limit=15&sortBy=price&order=desc"
-    let sortapiasce="https://63c63a6b4ebaa8028541ae3f.mockapi.io/products?page=2&limit=15&sortBy=price&order=asc"
-   
-let API="https://63c63a6b4ebaa8028541ae3f.mockapi.io/products?page=2&limit=15"
-
-
-    let fetchdata=[]
+<script>
 
     
-  thenfetch()
-    function thenfetch(){
-        fetch(API)
-        .then((request)=>{
-             return request.json()
-        })
-        .then(data =>{
-               fetchdata=data
-               console.log(data)
-               display(data)
-        })
-        .catch(err=>{
-            console.log(err)
-        })
-
-
-    }
-    function thenfetch1(){
-        fetch(sortapide)
-        .then((request)=>{
-             return request.json()
-        })
-        .then(data =>{
-               fetchdata=data
-               console.log(data)
-               display(data)
-        })
-        .catch(err=>{
-            console.log(err)
-        })
-
-
-    }
-    function thenfetch2(){
-        fetch(sortapiasce)
-        .then((request)=>{
-             return request.json()
-        })
-        .then(data =>{
-               fetchdata=data
-               console.log(data)
-               display(data)
-        })
-        .catch(err=>{
-            console.log(err)
-        })
-
-
-    }
-
-    let sort=document.getElementById("sort")
-    sort.addEventListener("change",(e)=>{
-        e.preventDefault()
-        if(sort.value=="")
-        {
-            thenfetch()
-        }
-        else {
-            if(sort.value=="HIGH")
-            {
-                thenfetch1()
-                
-            }
-            else{
-                thenfetch2()
-            }
-        }
-    })
-    let total=document.getElementById("total2")
       let cont=document.getElementById("main3")
-      let arr=JSON.parse(localStorage.getItem("cart"))||[]
-      let arr1=JSON.parse(localStorage.getItem("buy"))||[]
-    function display(data){
+let cart1=JSON.parse(localStorage.getItem("cart"))
+let arr1=JSON.parse(localStorage.getItem("buy"))
+    function display(){
+        let total=document.getElementById("cart-total")
     cont.innerHTML=""
-       data.forEach(element => {
+       cart1.forEach(element => {
+            
+
             let card=document.createElement("div")
             let img=document.createElement("img")
             img.src=element.avatar
             let name=document.createElement("h2")
             name.innerText=element.name
+            let quantity = document.createElement("span");
+            quantity.textContent=element.quantity
+
+            let Increment = document.createElement("button");
+        let Decrement = document.createElement("button1");
+        Increment.textContent="+"
+        Decrement.textContent="-"
 
             let price=document.createElement("h2")
             price.innerText="₹"+element.price
-            let button1=document.createElement("button")
+            let button1=document.createElement("button3")
             button1.innerText="BUY"
             button1.addEventListener("click",()=>{
                 arr1.push({...element,quantity:1})
@@ -673,52 +699,44 @@ let API="https://63c63a6b4ebaa8028541ae3f.mockapi.io/products?page=2&limit=15"
             })
 
             let button=document.createElement("button")
-            button.innerText="ADD TO CART"
-            total.innerText=data.length;
+            button.innerText="REMOVE"
 
             button.addEventListener("click",(e)=>{
-                if(checkDuplicate(element)){
-                  alert("Product Already in Cart")
-                }else{
-                  arr.push({...element,quantity:1})
-                  localStorage.setItem("cart",JSON.stringify(arr))
-                  alert("Product Added To Cart")
+                e.preventDefault()
+  cart1=cart1.filter((ele)=>{
+    return ele.id!=element.id;
+  })
+  localStorage.setItem("cart",JSON.stringify(cart1))
+display()
+})
 
-                }
-            })
+Increment.addEventListener("click",()=>{
+  element.quantity++
+   localStorage.setItem("cart",JSON.stringify(cart1))
+   display()
+})
+
+Decrement.addEventListener("click",()=>{
+  if(element.quantity>1){
+  element.quantity--
+   localStorage.setItem("cart",JSON.stringify(cart1))
+   display()}
+})
+
             
-            card.append(img,name,price,button,button1)
+            
+            card.append(img,name,price,button,Increment, quantity,Decrement,button1)
             cont.append(card)
             
         });
-       
-        
+
+        let sum=0
+      for(let i=0;i<cart1.length;i++){
+        sum+=cart1[i].price*cart1[i].quantity
+      }
+   total.textContent=sum
+
     }
-    function  checkDuplicate(element){
-        for(let i=0;i<arr.length;i++){
-          if(arr[i].id===element.id){
-            return true
-          }
-        }
-        return false
-   }
-   let inp=document.querySelector("form")
-    
-    inp.addEventListener("submit",(e)=>{
-    
-      e.preventDefault()
-      let search=document.getElementById("search").value
-      let fill=fetchdata.filter(element =>{
-    if(element.name.toUpperCase().includes(search.toUpperCase())==true){
-      return true
-    }else{
-      return false
-    }
-      })
-      display(fill)
-    
-    
-    })
-    // total.innerText=fetchdata.length;
+    display()
 </script>
 </html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in  page</title>
+    <link rel="icon" href="./logo.png" type="image/x-icon">
+    <style>
+         *{
+            padding: 0px;
+            margin: 0px;
+        }
+         .nav{
+            width: 100%;
+            height: 70px;
+            display: flex;
+        
+            
+            
+            box-shadow: 2px 2px 2px 2px rgb(214, 191, 191);
+        }
+        .nav:hover{
+            background-color: rgb(122, 89, 6);
+        }
+        .nav:hover a{
+            color:white;
+        }
+        .nav:hover h1{
+            color: white;
+        }
+        .nav div:nth-child(1){
+            text-decoration: none;
+            display: flex;
+            width: 50%;
+            justify-content: space-around;
+            align-items: center;
+            margin-left: 15px;
+
+        }
+        .nav div:nth-child(1) a {
+            text-decoration: none;
+        }
+        .nav div:nth-child(2){
+        
+            
+            width: 25%;
+        display: flex;
+        margin-left: 250px;
+            align-items: center;
+            justify-content: space-around;
+
+        }
+        .nav div:nth-child(2) a {
+            text-decoration: none;
+            font-size: 15px;
+        }
+    
+    #form1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        padding: 5px;
+  border: none;
+  border-radius: 10px;
+  
+        }
+        #form1 input{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        padding: 5px;
+background-color: rgb(92, 67, 5);
+  border-radius: 10px;
+  color: white;
+  border: none;
+  
+        }
+        #submit{
+            margin-top: 30px;
+            border: none;
+            background-color:rgb(61, 49, 1);
+            padding: 10px;
+            color: rgb(168, 3, 3);
+        
+            border-radius: 5px;
+            
+        }
+        #pass{
+            margin-top: 20px;
+          
+        }
+        .main2{
+            text-align: center;
+            color: rgb(75, 54, 2);
+            
+        }
+        /* body{
+            
+            box-shadow:2px 2px 2px 2px rgb(250, 242, 242) ;
+            margin-top: 8%;
+            width: 50%;
+            justify-content: center;
+            margin-left: 350px;
+            
+        } */
+        #mob{
+          margin-top: 20px;
+
+        }
+        .main2 img{
+            width:20%;
+            margin-top: 50px;
+            background-color:rgb(134, 98, 5);
+            padding: 8px;
+        }
+        #submit a{
+            color: white;
+            text-decoration: none;
+        }
+        
+        @media all and (min-width: 100px) and (max-width: 450px){
+            .nav{
+            width: 90%;
+            height: 70px;
+            display: flex;
+        justify-content: flex-start;
+        margin: auto;
+        flex-direction: column;
+       
+            
+            
+            box-shadow: 2px 2px 2px 2px rgb(214, 191, 191);
+        }
+        .nav div:nth-child(1){
+            text-decoration: none;
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            align-items: center;
+            margin: auto;
+            
+
+        }
+        .nav div:nth-child(2){
+            text-decoration: none;
+            display: flex;
+            display: block;
+            width: 30%;
+           
+            align-items: center;
+            /* margin-left: 100px; */
+            
+            display: none;
+
+        }
+        .nav div:nth-child(1) a {
+            text-decoration: none;
+            font-size: 12px;
+        }
+        .nav div:nth-child(1) h1{
+            font-size: 20px;
+        }
+        .nav div:nth-child(2){
+        
+            
+            width: 25%;
+        display: flex;
+        /* margin-left: 250px; */
+            align-items: center;
+            justify-content: space-around;
+        
+            margin-right: 130px;
+
+        }
+        .nav div:nth-child(2) a {
+            text-decoration: none;
+            font-size: 12px;
+            
+        }
+    
+    #form1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        
+  border: none;
+        }
+        #submit{
+            margin-top: 30px;
+            border: none;
+            background-color: coral;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            
+        }
+        #pass{
+            margin-top: 20px;
+          
+        }
+        .main2{
+            text-align: center;
+            color:red;
+            
+        }
+        /* body{
+            
+            box-shadow:2px 2px 2px 2px rgb(250, 242, 242) ;
+            margin-top: 8%;
+            width: 50%;
+            justify-content: center;
+            margin-left: 350px;
+            
+        } */
+        #mob{
+          margin-top: 20px;
+
+        }
+        .main2 img{
+            width:20%;
+            margin-top: 50px;
+        }
+        #submit a{
+            text-decoration: none;
+        }
+        }
+        </style>
+   
+</head>
+<body>
+    
+    <div class="nav">
+        
+        <div>
+           <i><h1>Easy shop</h1></i>
+           <a href="">WOMEN</a>
+            <a href="">MEN</a>
+            <a href="">KIDS</a>
+           <a href="">HOME</a>
+           <a href="">OFFER</a>
+            
+        </div>
+
+        
+            <div>
+                <a href="">SCRAP BOOK </a>
+                <a href="">SEARCH</a>
+                <a href="">CART</a>
+                <a href="./signin.html">LOGIN</a>
+            
+            </div>
+                
+    
+    
+    
+
+    </div>
+    
+
+
+
+    <div class="main2">
+        <img src="./logo.png" alt="error">
+        <h1><i>
+            WELCOME IN EASY SHOP</i></h1>
+    </div>
+    <div id="form1">
+        <input type="email" placeholder="Enter your email address" id="email"  >
+       
+        <input type="text" placeholder="Mobile number" id="mob">
+        <input type="text" placeholder=" put password" id="pass">
+     <button id="submit"><a href="./menshop.html">SignUp</a></button>
+    </div>
+</body>
+<script>
+let arr=[]
+let button=document.getElementById("submit")
+function display(){
+button.addEventListener("click",(e)=>{
+    e.preventDefault()
+    let obj={
+        email:document.getElementById("email").value,
+        mob:document.getElementById("mob").value,
+        pass:document.getElementById("pass").value
+    }
+    arr.push(obj)
+    localStorage.setItem("login",JSON.stringify(arr))
+    alert("sign up successful")
+    window.location.href="./signin.html"
+    
+
+
+})
+
+}
+display()
+
+
+</script>
+</html>
